@@ -20,7 +20,7 @@ namespace stjernholm.nu.ASMX_Demo
         [WebMethod]
         public string HelloWorld()
         {
-            return "Hello World";
+            return "Hello World ";
         }
     }
 }

@@ -71,6 +71,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ServiceSubtract\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +103,7 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\ServiceReference1\Weather.wsdl" />
+    <None Include="Service References\ServiceSubtract\SubtractTwoNumbers.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -109,6 +115,7 @@
     <WCFMetadataStorage Include="Service References\ServiceAddingThree\" />
     <WCFMetadataStorage Include="Service References\ServiceAddTwoNumbers\" />
     <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+    <WCFMetadataStorage Include="Service References\ServiceSubtract\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ServiceReference1\Weather.disco" />
@@ -151,6 +158,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ServiceAddingThree\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceSubtract\SubtractTwoNumbers.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceSubtract\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceSubtract\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceSubtract\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

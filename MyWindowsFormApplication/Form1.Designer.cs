@@ -48,6 +48,12 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.resultSubtract = new System.Windows.Forms.Label();
+            this.buttonSubtract = new System.Windows.Forms.Button();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numberOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberTwo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericNumberTwo)).BeginInit();
@@ -56,6 +62,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonWeather
@@ -224,11 +232,68 @@
             this.numericUpDown3.Size = new System.Drawing.Size(67, 22);
             this.numericUpDown3.TabIndex = 20;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(125, 268);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(13, 17);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "-";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(1, 271);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(20, 17);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "4.";
+            // 
+            // resultSubtract
+            // 
+            this.resultSubtract.AutoSize = true;
+            this.resultSubtract.Location = new System.Drawing.Point(125, 327);
+            this.resultSubtract.Name = "resultSubtract";
+            this.resultSubtract.Size = new System.Drawing.Size(0, 17);
+            this.resultSubtract.TabIndex = 24;
+            // 
+            // buttonSubtract
+            // 
+            this.buttonSubtract.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSubtract.Location = new System.Drawing.Point(93, 294);
+            this.buttonSubtract.Name = "buttonSubtract";
+            this.buttonSubtract.Size = new System.Drawing.Size(75, 30);
+            this.buttonSubtract.TabIndex = 23;
+            this.buttonSubtract.Text = "=";
+            this.buttonSubtract.UseVisualStyleBackColor = true;
+            this.buttonSubtract.Click += new System.EventHandler(this.buttonSubtract_Click);
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(142, 266);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(67, 22);
+            this.numericUpDown4.TabIndex = 22;
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.Location = new System.Drawing.Point(58, 266);
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(67, 22);
+            this.numericUpDown5.TabIndex = 21;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 511);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.resultSubtract);
+            this.Controls.Add(this.buttonSubtract);
+            this.Controls.Add(this.numericUpDown4);
+            this.Controls.Add(this.numericUpDown5);
             this.Controls.Add(this.numericUpDown3);
             this.Controls.Add(this.numericUpDown2);
             this.Controls.Add(this.numericUpDown1);
@@ -256,6 +321,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,6 +350,12 @@
         private System.Windows.Forms.NumericUpDown numericNumberThree;
         private System.Windows.Forms.NumericUpDown numericNumberOne;
         private System.Windows.Forms.NumericUpDown numericNumberTwo;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label resultSubtract;
+        private System.Windows.Forms.Button buttonSubtract;
+        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown numericUpDown5;
     }
 }
 

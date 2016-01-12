@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MyWindowsFormApplication.ServiceAddingThree;
 using MyWindowsFormApplication.ServiceAddTwoNumbers;
 using MyWindowsFormApplication.ServiceReference1;
+using MyWindowsFormApplication.ServiceSubtract;
 
 namespace MyWindowsFormApplication
 {
@@ -36,6 +37,12 @@ namespace MyWindowsFormApplication
         {
             AddingThreeNumbersSoapClient myClient = new AddingThreeNumbersSoapClient();
             resultAddingThree.Text = myClient.AddThreeNumbers(numericUpDown1.Value, numericUpDown2.Value,numericUpDown3.Value).ToString();
+        }
+
+        private void buttonSubtract_Click(object sender, EventArgs e)
+        {
+            SubtractTwoNumbersSoapClient newClient = new SubtractTwoNumbersSoapClient();
+            resultSubtract.Text = newClient.SubtractNumbers(numericUpDown5.Value, numericUpDown4.Value).ToString();
         }
     }
 }

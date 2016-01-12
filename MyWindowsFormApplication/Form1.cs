@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MyWindowsFormApplication.ServiceAddTwoNumbers;
 using MyWindowsFormApplication.ServiceReference1;
 
 namespace MyWindowsFormApplication
@@ -22,6 +23,12 @@ namespace MyWindowsFormApplication
         {
             WeatherSoapClient client = new WeatherSoapClient();
             labelWeather.Text = client.HelloWorld();
+        }
+
+        private void twoNumberBtn_Click(object sender, EventArgs e)
+        {
+            AddTwoNumbersSoapClient twoNumberClient = new AddTwoNumbersSoapClient();
+            twoNumberResult.Text = twoNumberClient.AddTwoNumber(numberOne.Value, numberTwo.Value).ToString();
         }
     }
 }

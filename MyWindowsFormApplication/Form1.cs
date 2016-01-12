@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MyWindowsFormApplication.ServiceAddingThree;
 using MyWindowsFormApplication.ServiceAddTwoNumbers;
 using MyWindowsFormApplication.ServiceReference1;
 
@@ -29,6 +30,12 @@ namespace MyWindowsFormApplication
         {
             AddTwoNumbersSoapClient twoNumberClient = new AddTwoNumbersSoapClient();
             twoNumberResult.Text = twoNumberClient.AddTwoNumber(numberOne.Value, numberTwo.Value).ToString();
+        }
+
+        private void btnResultAddingThree_Click(object sender, EventArgs e)
+        {
+            AddingThreeNumbersSoapClient myClient = new AddingThreeNumbersSoapClient();
+            resultAddingThree.Text = myClient.AddThreeNumbers(numericUpDown1.Value, numericUpDown2.Value,numericUpDown3.Value).ToString();
         }
     }
 }

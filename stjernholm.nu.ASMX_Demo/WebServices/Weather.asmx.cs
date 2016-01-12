@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,11 +17,12 @@ namespace stjernholm.nu.ASMX_Demo
     // [System.Web.Script.Services.ScriptService]
     public class Weather : System.Web.Services.WebService
     {
-
         [WebMethod]
         public string HelloWorld()
         {
-            return "Hello World ";
+            var rnd = new Random();
+            var list = new List<string> {"Cloud", "Sun", "Rain", "Snow"};
+            return "Hello World " + list[rnd.Next(1,4)];
         }
     }
 }

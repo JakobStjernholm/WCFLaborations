@@ -48,6 +48,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -75,15 +77,37 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Service References\WeatherService\stjernholm.nu.ASMX_Demo.WeatherService.HelloWorldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\WeatherService\Weather.disco" />
+    <None Include="Service References\WeatherService\configuration91.svcinfo" />
+    <None Include="Service References\WeatherService\configuration.svcinfo" />
+    <None Include="Service References\WeatherService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="WebServices\Weather.asmx" />
     <Content Include="Web.config" />
+    <None Include="Service References\WeatherService\Weather.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\WeatherService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="WebServices\Weather.asmx.cs">
       <DependentUpon>Weather.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WeatherService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

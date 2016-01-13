@@ -22,55 +22,64 @@ namespace GetDateFromName
         [WebMethod]
         public string GetName(string name)
         {
-            var myListOfNameDays = File.ReadAllLines(@"C:\Users\jakob_000\Win14\WCF\Namnsdagar.txt");
-            foreach (var nameDay in myListOfNameDays)
+             var nameToLower = name.ToLower();
+            if (!string.IsNullOrEmpty(nameToLower))
             {
-                if (nameDay.Contains(name))
+                var myListOfNameDays = File.ReadAllLines(@"C:\Users\jakob_000\Win14\WCF\Namnsdagar.txt");
+                foreach (var nameDay in myListOfNameDays)
                 {
-                    var newArray = nameDay.Split(' ');
-                    switch (newArray[1])
+                    var newNameDay = nameDay.ToLower();
+                    if (newNameDay.Contains(nameToLower))
                     {
-                        case "1":
-                            newArray[1] = "Januari";
-                            break;
-                        case "2":
-                            newArray[1] = "Februari";
-                            break;
-                        case "3":
-                            newArray[1] = "Mars";
-                            break;
-                        case "4":
-                            newArray[1] = "April";
-                            break;
-                        case "5":
-                            newArray[1] = "Maj";
-                            break;
-                        case "6":
-                            newArray[1] = "Juni";
-                            break;
-                        case "7":
-                            newArray[1] = "Juli";
-                            break;
-                        case "8":
-                            newArray[1] = "Augusti";
-                            break;
-                        case "9":
-                            newArray[1] = "September";
-                            break;
-                        case "10":
-                            newArray[1] = "Oktober";
-                            break;
-                        case "11":
-                            newArray[1] = "November";
-                            break;
-                        case "12":
-                            newArray[1] = "December";
-                            break;
+                        var newArray = newNameDay.Split(' ');
+                        switch (newArray[1])
+                        {
+                            case "1":
+                                newArray[1] = "Januari";
+                                break;
+                            case "2":
+                                newArray[1] = "Februari";
+                                break;
+                            case "3":
+                                newArray[1] = "Mars";
+                                break;
+                            case "4":
+                                newArray[1] = "April";
+                                break;
+                            case "5":
+                                newArray[1] = "Maj";
+                                break;
+                            case "6":
+                                newArray[1] = "Juni";
+                                break;
+                            case "7":
+                                newArray[1] = "Juli";
+                                break;
+                            case "8":
+                                newArray[1] = "Augusti";
+                                break;
+                            case "9":
+                                newArray[1] = "September";
+                                break;
+                            case "10":
+                                newArray[1] = "Oktober";
+                                break;
+                            case "11":
+                                newArray[1] = "November";
+                                break;
+                            case "12":
+                                newArray[1] = "December";
+                                break;
+                        }
+                        return newArray[0] + " " + newArray[1];
                     }
-                    return newArray[0] + " " + newArray[1];
                 }
             }
-            return "This name could not be found!";
+            else
+            {
+                return "No name were typed";
+            }
+            return "The name day could not be found";
         }
     }
 }

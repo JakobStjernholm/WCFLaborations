@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyWindowsFormApplication.ServiceAddingThree;
 using MyWindowsFormApplication.ServiceAddTwoNumbers;
+using MyWindowsFormApplication.ServiceAmerican;
 using MyWindowsFormApplication.ServiceNameDay;
 using MyWindowsFormApplication.ServiceReference1;
 using MyWindowsFormApplication.ServiceSubtract;
@@ -49,6 +50,17 @@ namespace MyWindowsFormApplication
         {
             GetNameDayServiceSoapClient nameDayClient = new GetNameDayServiceSoapClient();
             lblGetDate.Text = nameDayClient.GetName(txbTypeName.Text);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AmericanSoapClient americanClient = new AmericanSoapClient();
+            listView1.Items.Clear();
+            var array = americanClient.CheckAmericanWar((string)comboBox1.SelectedItem);
+            foreach (var a in array)
+            {
+                listView1.Items.Add(a);
+            }
         }
     }
 }

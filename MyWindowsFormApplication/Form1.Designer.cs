@@ -58,6 +58,11 @@
             this.btnGetDate = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.lblGetDate = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numberOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberTwo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericNumberTwo)).BeginInit();
@@ -321,11 +326,67 @@
             this.lblGetDate.Size = new System.Drawing.Size(0, 17);
             this.lblGetDate.TabIndex = 30;
             // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(437, 204);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(304, 184);
+            this.listView1.TabIndex = 31;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Tile;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1861",
+            "1862",
+            "1863",
+            "1864",
+            "1865"});
+            this.comboBox1.Location = new System.Drawing.Point(437, 153);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(205, 24);
+            this.comboBox1.TabIndex = 32;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(402, 156);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(20, 17);
+            this.label10.TabIndex = 33;
+            this.label10.Text = "6.";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(434, 133);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(327, 17);
+            this.label11.TabIndex = 34;
+            this.label11.Text = "Amerikanska slag under inbördeskriget 1861-1865";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(434, 180);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(273, 17);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Välj årtal för att se alla slagen från de året";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 511);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.lblGetDate);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnGetDate);
@@ -402,6 +463,11 @@
         private System.Windows.Forms.Button btnGetDate;
         private System.Windows.Forms.Label lblGetDate;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
     }
 }
 

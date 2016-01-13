@@ -66,6 +66,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ServiceAmerican\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceNameDay\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -104,6 +109,13 @@
     </Compile>
     <None Include="Service References\ServiceAddingThree\AddingThreeNumbers.wsdl" />
     <None Include="Service References\ServiceAddTwoNumbers\AddTwoNumbers.wsdl" />
+    <None Include="Service References\ServiceAmerican\American.wsdl" />
+    <None Include="Service References\ServiceAmerican\MyWindowsFormApplication.ServiceAmerican.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceAmerican\MyWindowsFormApplication.ServiceAmerican.CheckAmericanWarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\ServiceNameDay\GetNameDayService.wsdl" />
     <None Include="Service References\ServiceNameDay\MyWindowsFormApplication.ServiceNameDay.GetNameResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -123,6 +135,7 @@
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceAddingThree\" />
     <WCFMetadataStorage Include="Service References\ServiceAddTwoNumbers\" />
+    <WCFMetadataStorage Include="Service References\ServiceAmerican\" />
     <WCFMetadataStorage Include="Service References\ServiceNameDay\" />
     <WCFMetadataStorage Include="Service References\ServiceReference1\" />
     <WCFMetadataStorage Include="Service References\ServiceSubtract\" />
@@ -198,6 +211,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ServiceNameDay\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceAmerican\American.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceAmerican\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceAmerican\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceAmerican\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

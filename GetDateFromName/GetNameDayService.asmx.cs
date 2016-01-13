@@ -22,7 +22,7 @@ namespace GetDateFromName
         [WebMethod]
         public string GetName(string name)
         {
-             var nameToLower = name.ToLower();
+            var nameToLower = name.ToLower();
             if (!string.IsNullOrEmpty(nameToLower))
             {
                 var myListOfNameDays = File.ReadAllLines(@"C:\Users\jakob_000\Win14\WCF\Namnsdagar.txt");

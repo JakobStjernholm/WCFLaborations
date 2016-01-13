@@ -54,6 +54,10 @@
             this.buttonSubtract = new System.Windows.Forms.Button();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.txbTypeName = new System.Windows.Forms.TextBox();
+            this.btnGetDate = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblGetDate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numberOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberTwo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericNumberTwo)).BeginInit();
@@ -283,11 +287,49 @@
             this.numericUpDown5.Size = new System.Drawing.Size(67, 22);
             this.numericUpDown5.TabIndex = 21;
             // 
+            // txbTypeName
+            // 
+            this.txbTypeName.Location = new System.Drawing.Point(437, 24);
+            this.txbTypeName.Name = "txbTypeName";
+            this.txbTypeName.Size = new System.Drawing.Size(205, 22);
+            this.txbTypeName.TabIndex = 27;
+            // 
+            // btnGetDate
+            // 
+            this.btnGetDate.Location = new System.Drawing.Point(649, 22);
+            this.btnGetDate.Name = "btnGetDate";
+            this.btnGetDate.Size = new System.Drawing.Size(92, 23);
+            this.btnGetDate.TabIndex = 28;
+            this.btnGetDate.Text = "Get date";
+            this.btnGetDate.UseVisualStyleBackColor = true;
+            this.btnGetDate.Click += new System.EventHandler(this.btnGetDate_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(402, 27);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(20, 17);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "5.";
+            // 
+            // lblGetDate
+            // 
+            this.lblGetDate.AutoSize = true;
+            this.lblGetDate.Location = new System.Drawing.Point(434, 58);
+            this.lblGetDate.Name = "lblGetDate";
+            this.lblGetDate.Size = new System.Drawing.Size(0, 17);
+            this.lblGetDate.TabIndex = 30;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 511);
+            this.Controls.Add(this.lblGetDate);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.btnGetDate);
+            this.Controls.Add(this.txbTypeName);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.resultSubtract);
@@ -356,6 +398,10 @@
         private System.Windows.Forms.Button buttonSubtract;
         private System.Windows.Forms.NumericUpDown numericUpDown4;
         private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.TextBox txbTypeName;
+        private System.Windows.Forms.Button btnGetDate;
+        private System.Windows.Forms.Label lblGetDate;
+        private System.Windows.Forms.Label label9;
     }
 }
 

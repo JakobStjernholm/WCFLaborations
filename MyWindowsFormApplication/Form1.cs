@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyWindowsFormApplication.ServiceAddingThree;
 using MyWindowsFormApplication.ServiceAddTwoNumbers;
+using MyWindowsFormApplication.ServiceNameDay;
 using MyWindowsFormApplication.ServiceReference1;
 using MyWindowsFormApplication.ServiceSubtract;
 
@@ -43,6 +44,11 @@ namespace MyWindowsFormApplication
         {
             SubtractTwoNumbersSoapClient newClient = new SubtractTwoNumbersSoapClient();
             resultSubtract.Text = newClient.SubtractNumbers(numericUpDown5.Value, numericUpDown4.Value).ToString();
+        }
+        private void btnGetDate_Click(object sender, EventArgs e)
+        {
+            GetNameDayServiceSoapClient nameDayClient = new GetNameDayServiceSoapClient();
+            lblGetDate.Text = nameDayClient.GetName(txbTypeName.Text);
         }
     }
 }

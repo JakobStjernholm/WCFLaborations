@@ -34,22 +34,33 @@ namespace RepublicanRepresentens
         [WebMethod]
         public List<string> GetAllCandidates(string fromYear,string tooYear)
         {
-            var intFromYear = int.Parse(fromYear);
-            var intToYear = int.Parse(tooYear);
-            var listOfAll = new List<string>();
-            var listOfAllCandidates = File.ReadAllLines(@"C:\Users\jakob_000\Win14\RepublikanskaKandidater.txt");
-            foreach (var candidate in listOfAllCandidates)
+            var list = new List<string>();
+            if (!(fromYear == null || tooYear == null))
             {
+                var intFromYear = int.Parse(fromYear);
                 
-                var oneYearWithCandidate = candidate.Split(' ');
-                var year = int.Parse(oneYearWithCandidate[0]);
-                if (year >= intFromYear && year <= intToYear)
+                var intToYear = int.Parse(tooYear);
+                var listOfAll = new List<string>();
+                var listOfAllCandidates = File.ReadAllLines(@"C:\Users\jakob_000\Win14\RepublikanskaKandidater.txt");
+                foreach (var candidate in listOfAllCandidates)
                 {
-                    listOfAll.Add(candidate);
-                }
-            }
 
-            return listOfAll;
+                    var oneYearWithCandidate = candidate.Split(' ');
+                    var year = int.Parse(oneYearWithCandidate[0]);
+                    if (year >= intFromYear && year <= intToYear)
+                    {
+                        listOfAll.Add(candidate);
+                    }
+                   
+                }
+
+
+                return listOfAll;
+            }
+            
+            list.Add("You must choose year on both dropdownlists!");
+            return list;
+
         }
     }
 }

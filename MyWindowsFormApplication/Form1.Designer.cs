@@ -69,6 +69,11 @@
             this.listView2 = new System.Windows.Forms.ListView();
             this.comboBoxToYear = new System.Windows.Forms.ComboBox();
             this.buttonGetCandidates = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.comboBoxTwo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.numberOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberTwo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericNumberTwo)).BeginInit();
@@ -116,7 +121,7 @@
             // twoNumberBtn
             // 
             this.twoNumberBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.twoNumberBtn.Location = new System.Drawing.Point(93, 123);
+            this.twoNumberBtn.Location = new System.Drawing.Point(215, 90);
             this.twoNumberBtn.Name = "twoNumberBtn";
             this.twoNumberBtn.Size = new System.Drawing.Size(75, 30);
             this.twoNumberBtn.TabIndex = 5;
@@ -127,7 +132,7 @@
             // twoNumberResult
             // 
             this.twoNumberResult.AutoSize = true;
-            this.twoNumberResult.Location = new System.Drawing.Point(125, 156);
+            this.twoNumberResult.Location = new System.Drawing.Point(311, 97);
             this.twoNumberResult.Name = "twoNumberResult";
             this.twoNumberResult.Size = new System.Drawing.Size(0, 17);
             this.twoNumberResult.TabIndex = 6;
@@ -162,7 +167,7 @@
             // resultAddingThree
             // 
             this.resultAddingThree.AutoSize = true;
-            this.resultAddingThree.Location = new System.Drawing.Point(168, 246);
+            this.resultAddingThree.Location = new System.Drawing.Point(366, 181);
             this.resultAddingThree.Name = "resultAddingThree";
             this.resultAddingThree.Size = new System.Drawing.Size(0, 17);
             this.resultAddingThree.TabIndex = 12;
@@ -170,7 +175,7 @@
             // btnResultAddingThree
             // 
             this.btnResultAddingThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResultAddingThree.Location = new System.Drawing.Point(142, 204);
+            this.btnResultAddingThree.Location = new System.Drawing.Point(284, 176);
             this.btnResultAddingThree.Name = "btnResultAddingThree";
             this.btnResultAddingThree.Size = new System.Drawing.Size(67, 30);
             this.btnResultAddingThree.TabIndex = 11;
@@ -211,7 +216,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(125, 178);
+            this.label5.Location = new System.Drawing.Point(100, 178);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(16, 17);
             this.label5.TabIndex = 16;
@@ -220,7 +225,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(212, 178);
+            this.label6.Location = new System.Drawing.Point(193, 180);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(16, 17);
             this.label6.TabIndex = 17;
@@ -228,21 +233,21 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(234, 176);
+            this.numericUpDown1.Location = new System.Drawing.Point(211, 179);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(67, 22);
             this.numericUpDown1.TabIndex = 18;
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(142, 176);
+            this.numericUpDown2.Location = new System.Drawing.Point(122, 178);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(67, 22);
             this.numericUpDown2.TabIndex = 19;
             // 
             // numericUpDown3
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(52, 176);
+            this.numericUpDown3.Location = new System.Drawing.Point(27, 176);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(67, 22);
             this.numericUpDown3.TabIndex = 20;
@@ -250,7 +255,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(125, 268);
+            this.label7.Location = new System.Drawing.Point(125, 234);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(13, 17);
             this.label7.TabIndex = 26;
@@ -259,7 +264,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1, 271);
+            this.label8.Location = new System.Drawing.Point(1, 237);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(20, 17);
             this.label8.TabIndex = 25;
@@ -268,7 +273,7 @@
             // resultSubtract
             // 
             this.resultSubtract.AutoSize = true;
-            this.resultSubtract.Location = new System.Drawing.Point(125, 327);
+            this.resultSubtract.Location = new System.Drawing.Point(311, 234);
             this.resultSubtract.Name = "resultSubtract";
             this.resultSubtract.Size = new System.Drawing.Size(0, 17);
             this.resultSubtract.TabIndex = 24;
@@ -276,7 +281,7 @@
             // buttonSubtract
             // 
             this.buttonSubtract.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSubtract.Location = new System.Drawing.Point(93, 294);
+            this.buttonSubtract.Location = new System.Drawing.Point(220, 227);
             this.buttonSubtract.Name = "buttonSubtract";
             this.buttonSubtract.Size = new System.Drawing.Size(75, 30);
             this.buttonSubtract.TabIndex = 23;
@@ -286,14 +291,14 @@
             // 
             // numericUpDown4
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(142, 266);
+            this.numericUpDown4.Location = new System.Drawing.Point(142, 232);
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(67, 22);
             this.numericUpDown4.TabIndex = 22;
             // 
             // numericUpDown5
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(58, 266);
+            this.numericUpDown5.Location = new System.Drawing.Point(58, 232);
             this.numericUpDown5.Name = "numericUpDown5";
             this.numericUpDown5.Size = new System.Drawing.Size(67, 22);
             this.numericUpDown5.TabIndex = 21;
@@ -339,7 +344,7 @@
             this.listView1.Size = new System.Drawing.Size(304, 94);
             this.listView1.TabIndex = 31;
             this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Tile;
+            this.listView1.View = System.Windows.Forms.View.List;
             // 
             // comboBox1
             // 
@@ -404,12 +409,6 @@
             // comboBoxFromYear
             // 
             this.comboBoxFromYear.FormattingEnabled = true;
-            this.comboBoxFromYear.Items.AddRange(new object[] {
-            "1861",
-            "1862",
-            "1863",
-            "1864",
-            "1865"});
             this.comboBoxFromYear.Location = new System.Drawing.Point(437, 294);
             this.comboBoxFromYear.Name = "comboBoxFromYear";
             this.comboBoxFromYear.Size = new System.Drawing.Size(87, 24);
@@ -427,12 +426,6 @@
             // comboBoxToYear
             // 
             this.comboBoxToYear.FormattingEnabled = true;
-            this.comboBoxToYear.Items.AddRange(new object[] {
-            "1861",
-            "1862",
-            "1863",
-            "1864",
-            "1865"});
             this.comboBoxToYear.Location = new System.Drawing.Point(574, 294);
             this.comboBoxToYear.Name = "comboBoxToYear";
             this.comboBoxToYear.Size = new System.Drawing.Size(87, 24);
@@ -448,11 +441,61 @@
             this.buttonGetCandidates.UseVisualStyleBackColor = true;
             this.buttonGetCandidates.Click += new System.EventHandler(this.buttonGetCandidates_Click);
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(24, 317);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(88, 17);
+            this.label13.TabIndex = 47;
+            this.label13.Text = "Choose year";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(24, 270);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(211, 17);
+            this.label16.TabIndex = 46;
+            this.label16.Text = "Get Oscar winner and nominees";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(1, 293);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(20, 17);
+            this.label17.TabIndex = 45;
+            this.label17.Text = "6.";
+            // 
+            // listView3
+            // 
+            this.listView3.Location = new System.Drawing.Point(27, 341);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(304, 62);
+            this.listView3.TabIndex = 43;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            this.listView3.View = System.Windows.Forms.View.SmallIcon;
+            // 
+            // comboBoxTwo
+            // 
+            this.comboBoxTwo.FormattingEnabled = true;
+            this.comboBoxTwo.Location = new System.Drawing.Point(25, 290);
+            this.comboBoxTwo.Name = "comboBoxTwo";
+            this.comboBoxTwo.Size = new System.Drawing.Size(115, 24);
+            this.comboBoxTwo.TabIndex = 48;
+            this.comboBoxTwo.SelectedIndexChanged += new System.EventHandler(this.comboBoxTwo_SelectedIndexChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 511);
+            this.Controls.Add(this.comboBoxTwo);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.listView3);
             this.Controls.Add(this.buttonGetCandidates);
             this.Controls.Add(this.comboBoxToYear);
             this.Controls.Add(this.label14);
@@ -551,6 +594,11 @@
         private System.Windows.Forms.ListView listView2;
         private System.Windows.Forms.ComboBox comboBoxToYear;
         private System.Windows.Forms.Button buttonGetCandidates;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ComboBox comboBoxTwo;
     }
 }
 

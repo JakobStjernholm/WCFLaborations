@@ -81,6 +81,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ServiceOscar\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -135,6 +140,16 @@
     <None Include="Service References\ServiceNameDay\MyWindowsFormApplication.ServiceNameDay.GetNameResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\ServiceOscar\MyWindowsFormApplication.ServiceOscar.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceOscar\MyWindowsFormApplication.ServiceOscar.GetAllYearsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceOscar\MyWindowsFormApplication.ServiceOscar.GetWinnerForSelectedYearResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServiceOscar\OscarService.wsdl" />
     <None Include="Service References\ServiceReference1\MyWindowsFormApplication.ServiceReference1.HelloWorldResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -153,6 +168,7 @@
     <WCFMetadataStorage Include="Service References\ServiceAmerican\" />
     <WCFMetadataStorage Include="Service References\ServiceCandidates\" />
     <WCFMetadataStorage Include="Service References\ServiceNameDay\" />
+    <WCFMetadataStorage Include="Service References\ServiceOscar\" />
     <WCFMetadataStorage Include="Service References\ServiceReference1\" />
     <WCFMetadataStorage Include="Service References\ServiceSubtract\" />
   </ItemGroup>
@@ -257,6 +273,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ServiceCandidates\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceOscar\OscarService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceOscar\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceOscar\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServiceOscar\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

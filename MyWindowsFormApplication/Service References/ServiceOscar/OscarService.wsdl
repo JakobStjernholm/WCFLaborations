@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetAllYears">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllYearsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllYearsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetWinnerForSelectedYear">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWinnerForSelectedYearResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWinnerForSelectedYearResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAllYearsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllYears" />
+  </wsdl:message>
+  <wsdl:message name="GetAllYearsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllYearsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWinnerForSelectedYearSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWinnerForSelectedYear" />
+  </wsdl:message>
+  <wsdl:message name="GetWinnerForSelectedYearSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWinnerForSelectedYearResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OscarServiceSoap">
+    <wsdl:operation name="GetAllYears">
+      <wsdl:input message="tns:GetAllYearsSoapIn" />
+      <wsdl:output message="tns:GetAllYearsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWinnerForSelectedYear">
+      <wsdl:input message="tns:GetWinnerForSelectedYearSoapIn" />
+      <wsdl:output message="tns:GetWinnerForSelectedYearSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OscarServiceSoap" type="tns:OscarServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllYears">
+      <soap:operation soapAction="http://tempuri.org/GetAllYears" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWinnerForSelectedYear">
+      <soap:operation soapAction="http://tempuri.org/GetWinnerForSelectedYear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OscarServiceSoap12" type="tns:OscarServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllYears">
+      <soap12:operation soapAction="http://tempuri.org/GetAllYears" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWinnerForSelectedYear">
+      <soap12:operation soapAction="http://tempuri.org/GetWinnerForSelectedYear" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="OscarService">
+    <wsdl:port name="OscarServiceSoap" binding="tns:OscarServiceSoap">
+      <soap:address location="http://localhost:4574/OscarService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OscarServiceSoap12" binding="tns:OscarServiceSoap12">
+      <soap12:address location="http://localhost:4574/OscarService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

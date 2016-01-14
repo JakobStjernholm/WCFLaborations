@@ -12,6 +12,7 @@ using MyWindowsFormApplication.ServiceAddTwoNumbers;
 using MyWindowsFormApplication.ServiceAmerican;
 using MyWindowsFormApplication.ServiceCandidates;
 using MyWindowsFormApplication.ServiceNameDay;
+using MyWindowsFormApplication.ServiceOscar;
 using MyWindowsFormApplication.ServiceReference1;
 using MyWindowsFormApplication.ServiceSubtract;
 
@@ -23,6 +24,11 @@ namespace MyWindowsFormApplication
         {
             InitializeComponent();
             CandidatesAmericaRepublicanSoapClient client = new CandidatesAmericaRepublicanSoapClient();
+            OscarServiceSoapClient clientOscars = new OscarServiceSoapClient();
+            foreach (var allYear in clientOscars.GetAllYears())
+            {
+                comboBoxTwo.Items.Add(allYear);
+            }
             foreach (var year in client.GetAllYears())
             {
                 comboBoxFromYear.Items.Add(year);
@@ -81,6 +87,18 @@ namespace MyWindowsFormApplication
             {
                 listView2.Items.Add(item);
             }
+        }
+
+        private void comboBoxOscar_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void comboBoxTwo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            OscarServiceSoapClient oscarClient = new OscarServiceSoapClient();
+            listView3.Items.Clear();
+            listView3.Items.Add(oscarClient.GetWinnerForSelectedYear((string)comboBoxTwo.SelectedItem));
         }
     }
 }

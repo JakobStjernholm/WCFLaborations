@@ -63,6 +63,12 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.comboBoxFromYear = new System.Windows.Forms.ComboBox();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.comboBoxToYear = new System.Windows.Forms.ComboBox();
+            this.buttonGetCandidates = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numberOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numberTwo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericNumberTwo)).BeginInit();
@@ -328,9 +334,9 @@
             // 
             // listView1
             // 
-            this.listView1.Location = new System.Drawing.Point(437, 204);
+            this.listView1.Location = new System.Drawing.Point(437, 160);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(304, 184);
+            this.listView1.Size = new System.Drawing.Size(304, 94);
             this.listView1.TabIndex = 31;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Tile;
@@ -344,7 +350,7 @@
             "1863",
             "1864",
             "1865"});
-            this.comboBox1.Location = new System.Drawing.Point(437, 153);
+            this.comboBox1.Location = new System.Drawing.Point(437, 109);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(205, 24);
             this.comboBox1.TabIndex = 32;
@@ -353,7 +359,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(402, 156);
+            this.label10.Location = new System.Drawing.Point(402, 112);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(20, 17);
             this.label10.TabIndex = 33;
@@ -362,7 +368,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(434, 133);
+            this.label11.Location = new System.Drawing.Point(434, 89);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(327, 17);
             this.label11.TabIndex = 34;
@@ -371,17 +377,88 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(434, 180);
+            this.label12.Location = new System.Drawing.Point(434, 136);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(273, 17);
             this.label12.TabIndex = 35;
             this.label12.Text = "Välj årtal för att se alla slagen från de året";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(434, 274);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(273, 17);
+            this.label14.TabIndex = 39;
+            this.label14.Text = "Republikanska kandidater i Presidentvalet";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(402, 297);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(20, 17);
+            this.label15.TabIndex = 38;
+            this.label15.Text = "6.";
+            // 
+            // comboBoxFromYear
+            // 
+            this.comboBoxFromYear.FormattingEnabled = true;
+            this.comboBoxFromYear.Items.AddRange(new object[] {
+            "1861",
+            "1862",
+            "1863",
+            "1864",
+            "1865"});
+            this.comboBoxFromYear.Location = new System.Drawing.Point(437, 294);
+            this.comboBoxFromYear.Name = "comboBoxFromYear";
+            this.comboBoxFromYear.Size = new System.Drawing.Size(87, 24);
+            this.comboBoxFromYear.TabIndex = 37;
+            // 
+            // listView2
+            // 
+            this.listView2.Location = new System.Drawing.Point(437, 327);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(470, 172);
+            this.listView2.TabIndex = 36;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            this.listView2.View = System.Windows.Forms.View.List;
+            // 
+            // comboBoxToYear
+            // 
+            this.comboBoxToYear.FormattingEnabled = true;
+            this.comboBoxToYear.Items.AddRange(new object[] {
+            "1861",
+            "1862",
+            "1863",
+            "1864",
+            "1865"});
+            this.comboBoxToYear.Location = new System.Drawing.Point(574, 294);
+            this.comboBoxToYear.Name = "comboBoxToYear";
+            this.comboBoxToYear.Size = new System.Drawing.Size(87, 24);
+            this.comboBoxToYear.TabIndex = 41;
+            // 
+            // buttonGetCandidates
+            // 
+            this.buttonGetCandidates.Location = new System.Drawing.Point(667, 292);
+            this.buttonGetCandidates.Name = "buttonGetCandidates";
+            this.buttonGetCandidates.Size = new System.Drawing.Size(149, 27);
+            this.buttonGetCandidates.TabIndex = 42;
+            this.buttonGetCandidates.Text = "Get Candidates";
+            this.buttonGetCandidates.UseVisualStyleBackColor = true;
+            this.buttonGetCandidates.Click += new System.EventHandler(this.buttonGetCandidates_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 511);
+            this.Controls.Add(this.buttonGetCandidates);
+            this.Controls.Add(this.comboBoxToYear);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.comboBoxFromYear);
+            this.Controls.Add(this.listView2);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -468,6 +545,12 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboBoxFromYear;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ComboBox comboBoxToYear;
+        private System.Windows.Forms.Button buttonGetCandidates;
     }
 }
 

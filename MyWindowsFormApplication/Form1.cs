@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MyWindowsFormApplication.ServiceAddingThree;
 using MyWindowsFormApplication.ServiceAddTwoNumbers;
 using MyWindowsFormApplication.ServiceAmerican;
+using MyWindowsFormApplication.ServiceCandidates;
 using MyWindowsFormApplication.ServiceNameDay;
 using MyWindowsFormApplication.ServiceReference1;
 using MyWindowsFormApplication.ServiceSubtract;
@@ -21,6 +22,13 @@ namespace MyWindowsFormApplication
         public Form1()
         {
             InitializeComponent();
+            CandidatesAmericaRepublicanSoapClient client = new CandidatesAmericaRepublicanSoapClient();
+            foreach (var year in client.GetAllYears())
+            {
+                comboBoxFromYear.Items.Add(year);
+                comboBoxToYear.Items.Add(year);
+            }
+            
         }
 
         private void buttonWeather_Click(object sender, EventArgs e)
@@ -60,6 +68,18 @@ namespace MyWindowsFormApplication
             foreach (var a in array)
             {
                 listView1.Items.Add(a);
+            }
+        }
+
+        private void buttonGetCandidates_Click(object sender, EventArgs e)
+        {
+            CandidatesAmericaRepublicanSoapClient candidateClient = new CandidatesAmericaRepublicanSoapClient();
+            listView2.Items.Clear();
+            var array = candidateClient.GetAllCandidates((string) comboBoxFromYear.SelectedItem,
+                (string) comboBoxToYear.SelectedItem);
+            foreach (var item in array)
+            {
+                listView2.Items.Add(item);
             }
         }
     }
